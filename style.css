@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    color: #1d1d1f;
+    background: #fff;
+    line-height: 1.6;
+}
+
+/* Nav */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 100;
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: #007AFF;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 0.95em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 24px 60px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #6e6e73;
+    margin-top: 16px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 32px;
+    background: #007AFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    background: #0066d6;
+}
+
+/* Features */
+.features {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2.4em;
+    margin-bottom: 12px;
+}
+
+.feature h3 {
+    font-size: 1.15em;
+    margin-bottom: 6px;
+}
+
+.feature p {
+    color: #6e6e73;
+    font-size: 0.95em;
+}
+
+/* Pricing */
+.pricing {
+    text-align: center;
+    padding: 60px 24px 80px;
+    background: #f5f5f7;
+}
+
+.pricing h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.pricing > p {
+    color: #6e6e73;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px 40px;
+    min-width: 200px;
+    position: relative;
+    border: 2px solid #e5e5e5;
+}
+
+.pricing-card.featured {
+    border-color: #007AFF;
+}
+
+.pricing-card .badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #34c759;
+    color: white;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.pricing-card h3 {
+    font-size: 1.1em;
+    color: #6e6e73;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.price span {
+    font-size: 0.45em;
+    font-weight: 400;
+    color: #6e6e73;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 24px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-links {
+    margin-bottom: 16px;
+}
+
+.footer-links a {
+    color: #007AFF;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 0.9em;
+}
+
+.copyright {
+    color: #86868b;
+    font-size: 0.85em;
+}
+
+/* Legal pages */
+.legal {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+.legal h1 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+.legal .updated {
+    color: #6e6e73;
+    font-style: italic;
+    margin-bottom: 32px;
+}
+
+.legal h2 {
+    font-size: 1.2em;
+    margin-top: 28px;
+    margin-bottom: 8px;
+}
+
+.legal p, .legal li {
+    color: #424245;
+    margin-bottom: 12px;
+}
+
+.legal ul {
+    padding-left: 24px;
+}
+
+/* Support page */
+.support {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    text-align: center;
+}
+
+.support h1 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+.support .subtitle {
+    margin-bottom: 40px;
+}
+
+.support-card {
+    background: #f5f5f7;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.support-card h3 {
+    margin-bottom: 8px;
+}
+
+.support-card a {
+    color: #007AFF;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
