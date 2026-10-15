@@ -227,6 +227,79 @@ nav {
     height: 586px;
 }
 
+/* iPhone Duo */
+.duo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px 120px;
+    text-align: center;
+}
+
+.duo-text {
+    max-width: 640px;
+    margin: 0 auto 48px;
+}
+
+.duo-text h2 {
+    font-size: 2.4em;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.duo-text p {
+    font-size: 1.05em;
+    color: var(--text-secondary);
+    margin-top: 16px;
+    line-height: 1.6;
+}
+
+/* Unfolded iPhone Duo, landscape: same bezel and shadow as .phone-frame, at the
+   inner display's 2853x2007 aspect, with a faint crease down the fold. */
+.duo-frame {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 2853 / 2007;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 44px;
+    border: 5px solid #333;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.duo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.duo-frame::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 14px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 45%, rgba(255, 255, 255, 0.08) 55%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+}
+
+.duo-frame.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.duo-frame.placeholder::before {
+    content: 'Screenshot';
+    color: var(--text-secondary);
+    font-size: 0.85em;
+}
+
 /* Carriers */
 .carriers {
     text-align: center;
@@ -453,11 +526,13 @@ footer {
 @media (max-width: 600px) {
     .hero-content h1 { font-size: 2em; }
     .feature-text h2 { font-size: 1.8em; }
+    .duo-text h2 { font-size: 1.8em; }
+    .duo-frame { border-radius: 24px; border-width: 3px; }
     .grid-features {
         grid-template-columns: 1fr;
     }
     nav { padding: 14px 20px; }
-    .hero, .features, .carriers, .grid-features, .pricing {
+    .hero, .features, .duo, .carriers, .grid-features, .pricing {
         padding-left: 20px;
         padding-right: 20px;
     }
