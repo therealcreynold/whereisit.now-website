@@ -18,15 +18,16 @@
 
     <main class="legal">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last Updated: July 2026</p>
+        <p class="updated">Last Updated: November 2026</p>
 
         <h2>1. Information We Collect</h2>
         <ul>
             <li>Tracking numbers you enter, scan, or import from Gmail</li>
             <li>A device token, if you enable push notifications, so we can deliver delivery alerts</li>
             <li>A per-installation identifier used by our tracking proxy to prevent abuse (see Section 6)</li>
+            <li>Daily totals of a few app milestones, such as a free trial starting (see Section 6)</li>
         </ul>
-        <p>WhereIsIt contains no analytics, advertising, attribution, or crash-reporting software. We do not build a profile of you, and we do not track you across apps or websites.</p>
+        <p>WhereIsIt contains no advertising, attribution, or crash-reporting software, and no third-party analytics. Apart from what is needed to track your packages and apply your plan, the only usage information the app sends is the milestone counts described in Section 6. We do not build a profile of you, and we do not track you across apps or websites.</p>
 
         <h2>2. Device Permissions</h2>
         <p>WhereIsIt requests the following permissions, which are used only on your device:</p>
@@ -76,6 +77,8 @@
             <li>To provide package tracking services</li>
             <li>To send push notifications about delivery updates</li>
             <li>To sync your data across your devices via your own private iCloud account</li>
+            <li>To apply the monthly allowance of WhereIsIt Lite, the free tier</li>
+            <li>To understand, in aggregate, whether the app's onboarding and plans are working</li>
         </ul>
 
         <h2>5. Data Storage</h2>
@@ -83,7 +86,9 @@
 
         <h2>6. Tracking Proxy</h2>
         <p>To look up shipment status, the app sends the tracking number and carrier name to our secure proxy service (hosted on Cloudflare), which forwards them to the relevant carrier or tracking service and returns the result to your device. The proxy exists so that carrier API credentials are never embedded in the app.</p>
-        <p>The proxy uses Apple App Attest to confirm requests come from a genuine copy of the app, and keeps only minimal, anonymous abuse-prevention data: a per-installation identifier (not linked to your name, email, or Apple ID) and request counts. It does <strong>not</strong> store your package history, names, addresses, or email content.</p>
+        <p>The proxy uses Apple App Attest to confirm requests come from a genuine copy of the app, and keeps only minimal abuse-prevention data, a per-installation identifier (not linked to your name, email, or Apple ID) and request counts, plus the Lite and milestone data described below. Cloudflare, which hosts the proxy, also keeps short-lived request logs to operate the service. The proxy does <strong>not</strong> store your package history, names, addresses, or email content.</p>
+        <p><strong>WhereIsIt Lite.</strong> The free tier includes a monthly allowance of packages from carriers other than UPS and DHL. Tracking requests tell the proxy whether your installation is on Lite or Pro. To apply the allowance, the proxy keeps the tracking numbers you add under it, stored with the same per-installation identifier, for the current calendar month (UTC) only. They are deleted automatically after the month ends. Tracking numbers are not kept this way for WhereIsIt Pro.</p>
+        <p><strong>Milestone counts.</strong> The app reports a small, fixed set of milestones: the welcome or plan screen being shown, choosing Lite, reaching the Lite allowance, starting a free trial, making or restoring a purchase, and being asked for a rating. Each report contains only the milestone name and a timestamp, and is signed with the same per-installation identifier as tracking requests so the proxy can confirm it comes from a genuine copy of the app. The proxy adds it to a daily total for that milestone; the totals are not linked to you or your device. Development builds of the app do not send these reports.</p>
 
         <h2>7. Third-Party Services</h2>
         <p>To retrieve delivery status, tracking numbers are sent to third-party carrier and tracking-data services: UPS, DHL, and <a href="https://www.ship24.com/privacy-policy" rel="noopener" target="_blank">Ship24</a>, a multi-carrier tracking aggregator. These services receive only the tracking number and, where relevant, a carrier hint — never your name, address, email, or other package details.</p>
